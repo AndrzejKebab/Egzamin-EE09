@@ -22,7 +22,30 @@
         </a>
     </div>
     <main>
-        
+        <h3>Oblicz koszt Paliwa</h3>
+        <label for="rodzajPaliwa">Rodzaj Paliwa (1-Benzyna, 2-Olejnapędowy):</label><br>
+        <input type="number" name="Rodzaj Paliwa" id="rodzajpaliwa"><br>
+        <label for="litry">Ile Litrów</label><br>
+        <input type="number" name="Ile Litrów" id="litry"><br>
+        <button id="oblicz" onclick="obliczenia()">OBLICZ</button>
+        <p id="wynik"></p>
+        <script id="obliczenia">
+            var Rodzaj = document.getElementById("rodzajpaliwa");
+            var litry = document.getElementById("litry");
+            var wynik;
+            switch (Rodzaj) {
+                case 1:
+                    wynik = litry * 4;
+                break;
+                case 2:
+                    wynik = litry * 3,5;
+                break;
+                default:
+                    litry
+            }
+
+
+        </script>
     </main>
     <div id="lewy">
         <a href="/02262809375/kwerendy.txt">Pobierz kwerendy</a>
