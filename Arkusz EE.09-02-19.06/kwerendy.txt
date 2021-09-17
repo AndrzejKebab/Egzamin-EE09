@@ -1,0 +1,4 @@
+SELECT `samochody`.`marka`, `samochody`.`model`, `samochody`.`kolor` FROM `samochody` WHERE `samochody`.`kolor` = 'czerwony'
+UPDATE `samochody` SET `stan` = 'dobry' WHERE `samochody`,`rocznik` = '2003'
+CREATE USER 'andrzej'@'localhost' Identified BY 'andrzej1@'
+GRANT UPDATE, SELECT ON `samochody`.`samochody` TO 'andrzej'@'localhost'
