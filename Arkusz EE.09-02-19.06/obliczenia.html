@@ -27,23 +27,27 @@
         <input type="number" name="Rodzaj Paliwa" id="rodzajpaliwa"><br>
         <label for="litry">Ile Litrów</label><br>
         <input type="number" name="Ile Litrów" id="litry"><br>
-        <button id="oblicz" onclick="obliczenia()">OBLICZ</button>
+        <button id="oblicz" onclick="Oblicz()">OBLICZ</button>
         <p id="wynik"></p>
-        <script id="obliczenia">
-            var Rodzaj = document.getElementById("rodzajpaliwa");
-            var litry = document.getElementById("litry");
-            var wynik;
-            switch (Rodzaj) {
-                case 1:
-                    wynik = litry * 4;
-                break;
-                case 2:
-                    wynik = litry * 3,5;
-                break;
-                default:
-                    litry
+        <script>
+            function Oblicz(){
+                var Rodzaj = document.getElementById("rodzajpaliwa").value;
+                Rodzaj = parseInt(Rodzaj);
+                var litry = document.getElementById("litry").value;
+                litry = parseInt(litry);
+                var wynik = 0;
+                switch (Rodzaj) {
+                   case 1:
+                       wynik = litry * 4;
+                   break;
+                   case 2:
+                       wynik = litry * 3,5;
+                   break;
+                   default:
+                       wynik = 0;
+                   }
+                   document.getElementById("wynik").innerHTML = "koszt paliwa:" + wynik + "zł";
             }
-
 
         </script>
     </main>
