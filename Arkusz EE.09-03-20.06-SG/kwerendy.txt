@@ -1,0 +1,1 @@
+SELECT `zadania`.`miesiac`, `zadania`.`rok` FROM `zadania` WHERE `zadania`.`dataZadania` = '2020-07-01';
