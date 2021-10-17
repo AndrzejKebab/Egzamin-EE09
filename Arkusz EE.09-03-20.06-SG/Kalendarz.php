@@ -11,11 +11,11 @@
 
 <body>
 
-    <div class="gorny-lewy">
+    <div id="gorny-lewy">
         <img src="logo1.png" alt="Mój kalendarz">
     </div>
 
-    <div class="gorny-prawy">
+    <div id="gorny-prawy">
         <h1>KALENDARZ</h1>
         <p>miesiąc: lipiec, rok:2020</p>
     </div>
@@ -27,13 +27,13 @@
         
             $sql = "SELECT dataZadania, miesiac, wpis FROM `zadania` WHERE miesiac = 'lipiec'";
             $result = $db->query($sql);
+
             while ($row = $result->fetch_assoc()) {
                 $data = $row['dataZadania'];
-                $miesiac = $row['miesiac'];
                 $wpis = $row['wpis'];
             
                 echo '<div>';
-                echo "<h6>$data, $miesiac</h6>";
+                echo "<h5>$data</h5>";
                 echo "<p>$wpis</p>";
                 echo '</div>';
             }
@@ -46,6 +46,8 @@
 
 
     <?php
+            $db = new mysqli('localhost', 'root', '', 'egzamin5');
+
             if (isset($_POST['wydarzenie'])) {
 
                 $wydarzenie = $_POST['wydarzenie'];
@@ -55,7 +57,7 @@
             }
      ?>
 
-    <footer class="stopka">
+    <footer id="stopka">
         <form action="kalendarz.php" method="POST">
             <label for="wpis">dodaj wpis:<input type="text" name="wydarzenie"> <button type="submit">DODAJ</button></label>
             <br>

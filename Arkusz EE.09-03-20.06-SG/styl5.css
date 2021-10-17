@@ -1,5 +1,30 @@
-body {
-    font-family: Arial;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+main {
+    clear: both;
+    width: 100%;
+}
+
+main>div {
+    background-color: #AFEEEE;
+    width: 150px;
+    height: 100px;
+    margin: 3px;
+    border: 1px solid black;
+    float: left;
+}
+
+main>div>h5 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+main>div>p {
+    margin-top: 30px;
+
 }
 
 #gorny-lewy {
@@ -9,17 +34,12 @@ body {
     float: left;
 }
 
-#gorny-lewy img{
-    width: 100%;
-    position: absolute;
-}
-
 #gorny-prawy {
+    color: white;
     background-color: #483D8B;
     height: 150px;
     width: 70%;
     float: right;
-    color: white;
 }
 
 #gorny-prawy h1 {
@@ -35,19 +55,4 @@ body {
     color: white;
     clear: both;
     padding: 10px;
-}
-
-main {
-    clear: both;
-    width: 100%;
-    height: 76.8vh;
-}
-
-main>div {
-    background-color: #AFEEEE;
-    width: 150px;
-    height: 100px;
-    margin: 3px;
-    border: 1px solid black;
-    float: left;
 }
