@@ -1,0 +1,43 @@
+html{
+    font-family: Georgia;
+}
+
+#banner1,#banner2{
+    background-color: #3cb371;
+    color: white;
+    height: 100px;
+    width: 40%;
+    float: left;
+}
+#banner3{
+    background-color: #3cb371;
+    height: 100px;
+    width: 20%;
+    float: right;
+}
+main{
+    clear: both;
+}
+main>div{
+    background-color: #FFDAB9;
+    width: 170px;
+    height: 90px;
+    margin: 5px;
+    border: solid 1px #3cb371;
+    float: left;
+}
+
+footer{
+    background-color: #3cb371;
+    color: white;
+    clear: both;
+    width: 100%;
+}
+
+h6{
+    text-align: right;
+}
+
+form{
+    padding: 30px;
+}

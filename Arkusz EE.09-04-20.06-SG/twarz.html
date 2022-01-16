@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi kosmetyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div id="lewy1">
+        <h2>W ofercie</h2>
+        <ul>
+            <li><a href="twarz.html">Zabiegi na twarz</a></li>
+            <ol>
+                <li>Piling</li>
+                <li>Mask</li>
+                <li>Regulacja brwi</li>
+            </ol>
+            <li>Masaż</li>
+            <li>Diety</li>
+
+        </ul>
+        <a href="index.html">Do strony głównej</a>
+    </div>
+
+    
+    <div id="prawy1"><h1>Salon Kosmetyczny</h1></div>
+
+    <div id="prawy2">
+        <h2>Sprwadź cenę swojej wizity</h2>
+    
+        <input type="checkbox" name="Piling" id="Piling"> Piling  <br>
+        <input type="checkbox" name="Maska" id="Maska"> Maska  <br>
+        <input type="checkbox" name="Masaz" id="Masaz"> Masaż twarzy  <br>
+        <input type="checkbox" name="Brwi" id="Brwi"> Regulacja Brwi  <br>
+        <button type="submit" onclick="oblicz()">Sprawdź Cenę</button> <br>
+    
+        <p id="wynik">Cena zabiegów: </p>
+    
+    </div>
+
+    <div id="lewy2"><img src="obraz1.jpg" alt="Kosmetyczka"></div>
+
+
+    <footer><p>Autor: PESEL</p></footer>
+</body>
+</html>
+
+<script>
+    function oblicz(){        
+        var piling = document.getElementById('Piling');
+        var maska = document.getElementById('Maska');
+        var masaz = document.getElementById('Masaz');
+        var brwi = document.getElementById('Brwi');
+
+        var wynik = 0;
+
+        if(piling.checked == true){
+            wynik += 45;
+        }
+        if(maska.checked == true){
+            wynik += 30;
+        }
+        if(masaz.checked == true){
+            wynik += 20;
+        }
+        if(brwi.checked == true){
+            wynik += 5;
+        }
+
+        document.getElementById('wynik').innerHTML = "Cena zabiegów: " + wynik +" zł";
+    }
+</script>
